@@ -1,0 +1,80 @@
+body {
+    width: 100%; 
+    height:100vh;
+    font-family: sans-serif;
+    background: linear-gradient(-45deg, #01109b, #fc36b0, #2c93d8, #03eeb7cb);
+    background-size: 400% 400%;
+    animation: change 9s ease-in-out infinite;
+  }
+
+.title {
+font-family: Poppins, sans-serif;
+    display: block;
+    padding: 12px;
+    width: 100%;
+    color: white;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
+
+  }
+
+  .input-container {
+    max-width: 570px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    top: 10px;
+    background-color: white;
+  }
+
+  .input-form > input {
+    width: 60%;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid cornflowerblue;
+    font-weight: bold;
+  }
+
+  .input-form > label {
+    font-weight: bold;
+  }
+
+  .input-form > input:focus {
+    outline: 0;
+    border-bottom: 2px solid cornflowerblue;
+  }
+
+  .input-form > input:focus::placeholder {
+    font-weight: bold;
+  }
+
+  .input-form > input::placeholder {
+    color: cornflowerblue;
+    font-weight: normal;
+  }
+  h4{
+    font-family: Poppins, sans-serif;
+    font-size: x-large;
+  }
+  h3{
+    font-family: Poppins, sans-serif;
+    font-size: large ;
+  }
+  input.transparent-input{
+   background-color:rgba(0,0,0,0) !important;
+   border:none !important;
+}
+::placeholder{
+  color:black;
+}
+
+@keyframes change{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position:0 50%;
+  }
+}

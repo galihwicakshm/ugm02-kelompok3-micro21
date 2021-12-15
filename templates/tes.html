@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediksi Harga Daging Kambing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: sans-serif;
+        background: linear-gradient(-45deg, #EE7752, #E73C7E , #23A605 , #23D5AB);
+        background-size: 400% 400%;
+        position: relative;
+
+      }
+      
+
+.title {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        color: white;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .input-container {
+        max-width: 800px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        border-radius: 5px;
+        top: 10px;
+        background-color: white;
+      }
+
+      .input-form > input {
+        width: 60%;
+        padding: 10px;
+        border: 0;
+        border-bottom: 1px solid cornflowerblue;
+        font-weight: bold;
+      }
+
+      .input-form > label {
+        font-weight: bold;
+      }
+
+      .input-form > input:focus {
+        outline: 0;
+        border-bottom: 2px solid cornflowerblue;
+      }
+
+      .input-form > input:focus::placeholder {
+        font-weight: bold;
+      }
+
+      .input-form > input::placeholder {
+        color: cornflowerblue;
+        font-weight: normal;
+      }
+      h4{
+        font-family: Poppins, sans-serif;
+        font-size: x-large;
+      }
+      h3{
+        font-family: Poppins, sans-serif;
+        font-size: large ;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      
+      <div class="text-center title">
+        <h2>Prediksi Harga Daging Kambing Berdasarkan Jumlah Akumulasi Kasus Harian Covid</h2>
+      </div>
+      <div class="container input-container mt-2">
+       <center> <img src="{{url_for('static', filename='images/daging1.png')}}" width="470px" height="220px"></center>
+        <h4 class="text-center mt-3">Input Jumlah Konfirmasi Harian</h4>
+        <br />
+        <div class="container">
+          <form action="{{ url_for('prediction') }}" method="post">
+            <div class="row ">
+              <div class="col-6 mx-auto input-form text-center">
+                <input class="text-center" type="number" name="predict" placeholder="Silahkan input disini... " required><br>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="d-grid gap-2 col-6 mx-auto mb-3">
+                <button type="submit" class="btn btn-success">
+                  Prediksi
+                </button>
+               
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <section>
+      <div class="text-center mt-3 mb-3">
+          <h3>Hasil</h3>
+      </div>
+    </section>
+    <section>
+      <div class="container input-container mt-2 text-center">
+        <h4 style="font-weight: bold">Harga Daging Kambing :  {{  prediksi }}</h4>
+      </div>
+    </section>
+  </body>
+</html>
